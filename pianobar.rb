@@ -32,7 +32,7 @@ class Pianobar
 
   def initialize
     # Create fifo if it doesn't exist
-    `mkfifo /tmp/pianobar`
+    `mkfifo /tmp/pianobar` unless File.exist? '/tmp/pianobar'
     
     # Start pianobar, kill its output!
     `pianobar > /dev/null&`
