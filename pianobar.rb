@@ -23,7 +23,11 @@ class Pianobar
   end
 
   def send_command(com)
-    `echo '#{com}' > /tmp/pianobar`
+    `echo '#{com.to_s}' > /tmp/pianobar`
+  end
+
+  def select_station(station)
+    send_command(station)
   end
 
   def initialize

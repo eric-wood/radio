@@ -13,6 +13,10 @@ require_relative 'pianobar.rb'
 
 @pb = Pianobar.new
 
+# Select the first station, just 'cause
+# TODO: change this maybe? meh.
+@pb.select_station(0)
+
 trap('SIGINT') do
   # TODO: maybe in the future just kill the pianobar process we started?
   `killall pianobar`
@@ -27,6 +31,4 @@ loop do
   stations = Pianobar.parse_stations(event)
   client.close
   p event
-  p stations
-  @pb.next_song
 end
