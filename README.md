@@ -22,7 +22,7 @@ I have a beautiful radio cabinet from the 1940s laying around...unfortunately th
 
 ### License
 
-** "THE BEER-WARE LICENSE" (Revision 42): **
+<b>"THE BEER-WARE LICENSE" (Revision 42):</b>
 
 [Eric Wood](http://ericwood.org) wrote this file. As long as you retain this notice you
 can do whatever you want with this stuff. If we meet some day, and you think
