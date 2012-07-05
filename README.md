@@ -20,3 +20,11 @@ I have a beautiful radio cabinet from the 1940s laying around...unfortunately th
 
 #### This project is currently being worked on! I've only just begun on this journey...
 
+### License
+
+#### "THE BEER-WARE LICENSE" (Revision 42):
+
+[Eric Wood](http://ericwood.org) wrote this file. As long as you retain this notice you
+can do whatever you want with this stuff. If we meet some day, and you think
+this stuff is worth it, you can buy me a beer in return.
+
