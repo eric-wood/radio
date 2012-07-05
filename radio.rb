@@ -20,9 +20,7 @@ trap('SIGINT') do
 end
 
 loop do
-  puts "looping"
   io = IO.select([@server], [])
-  puts "data!"
   client = @server.accept
   raw_event = client.gets("\n\r")
   event = Pianobar.parse_event(raw_event)
@@ -30,4 +28,5 @@ loop do
   client.close
   p event
   p stations
+  @pb.next_song
 end

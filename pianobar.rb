@@ -5,6 +5,27 @@
 
 
 class Pianobar
+  # The different commands pianobar takes mapped out
+  CONTROLS = {
+    :next_song      => 'n',
+    :pause          => 'p',
+    :change_station => 's',
+    :love_song      => '+',
+    :ban_song       => '-'
+  }
+  
+  # For ease of interaction we want to create a method for
+  # each different control. Metaprogramming time!
+  CONTROLS.each do |name,val|
+    send :define_method, name do
+      send_command(val)
+    end
+  end
+
+  def send_command(com)
+    `echo '#{com}' > /tmp/pianobar`
+  end
+
   def initialize
     # Create fifo if it doesn't exist
     `mkfifo /tmp/pianobar`
